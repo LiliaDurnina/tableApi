@@ -1,0 +1,29 @@
+.btn {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+
+    &:hover {
+        border-color: #8575bc;
+    }
+
+    &:focus, &:focus-visible {
+        outline: 4px auto #2f2f2f;
+
+    }
+
+
+
+}
+
+.active {
+    background-color: chartreuse;
+
+}
