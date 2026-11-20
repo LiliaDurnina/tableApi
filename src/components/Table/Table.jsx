@@ -1,5 +1,9 @@
 import cls from "./Table.module.css";
+
 export const Table = ({ users }) => {
+  if (users.length === 0) {
+    return <div>Соотвествий не найдено</div>;
+  }
   return (
     <table className={cls.table}>
       <thead className={cls.thead}>
@@ -20,6 +24,7 @@ export const Table = ({ users }) => {
 
 function makeBody(users) {
   console.log(users);
+
   const newBody = users.map((person, index) => {
     const date = new Date(person.registered.date);
     /* const formatDate = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`; */

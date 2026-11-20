@@ -98,7 +98,6 @@ p {
 
 input {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid var(--btn-bg-color);
   font-size: 1em;
 }
-
