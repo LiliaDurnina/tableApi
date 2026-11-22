@@ -1,73 +1,56 @@
+Лилия:
+Делаем новую ветку 
 
-function mydebounce(func, ms) {
-  let timeout;
-  return function (...args) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      func.apply(this, args);
-    }, ms);
-  };
-}
-export const Layout = () => {
-  const [userName, setUserName] = useState("");
-  const [showUserName, setShowUserName] = useState("");
+А потом на мастере пул реквест
 
-  function handleName(name) {
-    setUserName(name);
-    const debounceUserName = mydebounce(setShowUserName, 5000);
-    debounceUserName(name);
-  }
+Лилия:
+Реакт Мемо 
+Мемоизация функциональных компонентов
 
-  return (
-    <div>
-      <Input username={userName} setUserName={handleName} placeholder="Введите имя" />
-      <div className="text">Поиск по {showUserName}</div>;
-      <div>
-        <Table />
-      </div>
-    </div>
-  );
-};
+Чем отличаются useMemo и React. Meme 
 
+useCallback - мемоизирует какую-то функцию
 
+Лилия:
+UseCallback
 
+Лилия:
+Функция каждый раз что-то большое подготавливает - useCallback как-то подготавливает
 
+Лилия:
 
-import { useMemo, useState } from "react";
-import { Input } from "../Input";
-import { Table } from "../Table";
+Вын4сение логики API запроса папка в SRC c api
+Функция возвращает данные
 
-function mydebounce(func, ms) {
-  let timeout;
-  return function (...args) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      func.apply(this, args);
-    }, ms);
-  };
-}
+Лилия:
+Папка shared 
+В ней ui 
+ui kit 
 
-export const Layout = () => {
-  const [userName, setUserName] = useState("");
-  const [showUserName, setShowUserName] = useState("");
-  
-  const debounceUserName = useMemo(() => {
-    return mydebounce(setShowUserName, 500);
-  }, []);
+Все ьаттоны импуты тайблы
 
-  function handleName(name) {
-    setUserName(name);
-    debounceUserName(name);
-  }
+Лилия:
+Утилс в шаред
 
-  return (
-    <div>
-      <Input username={userName} setUserName={handleName} placeholder="Введите имя" />
-      <div className="text">Поиск по {showUserName}</div>
-      <div>
-        <Table />
-      </div>
-    </div>
-  );
-};
+Лилия:
+Рядом с лауоутом сеарч инпут - бизнес логика. Он обрабатывает текстовые вхождения
 
+Лилия:
+Изучить контакт провайдер 
+
+React context
+
+Лилия:
+Поубирать usememo
+
+Лилия:
+Убрать types react
+
+Лилия:
+Новая ветка!!
+
+Лилия:
+Index в js должен быть
+
+Лилия:
+Использование линтера на css файлы
