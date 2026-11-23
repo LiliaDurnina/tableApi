@@ -8,7 +8,6 @@ import cls from "./Layout.module.css";
 
 export const Layout = () => {
   const { users, loading, isError } = useUsers();
-
   const [showUserName, setShowUserName] = useState("");
 
   const showVisibleUsers = filteredUsers(users, showUserName);
@@ -23,6 +22,8 @@ export const Layout = () => {
         <br />
         <UserTable users={showVisibleUsers} />
         <div>
+          {" "}
+          <br />
           <LoadMoreButton />
         </div>
       </>
