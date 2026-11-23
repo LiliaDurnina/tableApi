@@ -20,9 +20,9 @@ export const Layout = () => {
     return (
       <>
         <div className="text">Поиск по {showUserName}</div>
+        <br />
         <UserTable users={showVisibleUsers} />
         <div>
-          <br />
           <LoadMoreButton />
         </div>
       </>
