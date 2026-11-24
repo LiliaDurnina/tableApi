@@ -1,6 +1,12 @@
-import { UserRows } from "../UserRows";
+import { useUsersState } from "../../../../context/useUsers";
+import { filteredUsers } from "../../../../shared/utils";
+import { UserBody } from "../UserBody";
 import cls from "./UserTable.module.css";
-export const UserTable = ({ users }) => {
+
+export const UserTable = ({ showUserName }) => {
+  console.log("UserTable render");
+  const { users } = useUsersState();
+  const showVisibleUsers = filteredUsers(users, showUserName);
   if (users.length === 0) {
     return <div>Соотвествий не найдено</div>;
   }
@@ -17,7 +23,7 @@ export const UserTable = ({ users }) => {
           <th>registered date</th>
         </tr>
       </thead>
-      <tbody>{UserRows(users)}</tbody>
+      <tbody>{<UserBody users={showVisibleUsers} />}</tbody>
     </table>
   );
 };
