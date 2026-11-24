@@ -1,1 +1,0 @@
-export { filteredUsers } from "./untils";

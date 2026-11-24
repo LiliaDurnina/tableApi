@@ -1,0 +1,1 @@
+export { filteredUsers } from "./filteredUsers";
