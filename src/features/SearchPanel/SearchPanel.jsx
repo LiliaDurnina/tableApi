@@ -6,7 +6,7 @@ import cls from "./SearchPanel.module.css";
 
 export const SearchPanel = memo(function SearchPanel({ setShowUserName }) {
   console.log("SearchPanel render");
-  const debounceUserName = useMemo(() => mydebounce(setShowUserName, 1000), []);
+  const debounceUserName = useMemo(() => mydebounce(setShowUserName, 1000), [setShowUserName]);
   const [userName, setUserName] = useState("");
   function handleName(name) {
     setUserName(name);

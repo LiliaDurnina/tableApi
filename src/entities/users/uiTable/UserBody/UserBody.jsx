@@ -1,4 +1,4 @@
-import { UserToolTip } from "../UserToolTip/UserToolTip";
+import { UserToolTip } from "../UserToolTip";
 
 export const UserBody = ({ users }) => {
   console.log("UserBody render");
@@ -11,7 +11,11 @@ export const UserBody = ({ users }) => {
     return (
       <tr key={index}>
         <td>{`${person.name.first} ${person.name.last}`}</td>
-        <UserToolTip person={person} />
+        {/* <td>
+          <img src={person.picture.large} alt="picture" />
+        </td> */}
+
+        {<UserToolTip person={person} />}
         <td>{person.location.city}</td>
         <td>{`${person.location.state} ${person.location.city}`}</td>
         <td>{person.email}</td>
